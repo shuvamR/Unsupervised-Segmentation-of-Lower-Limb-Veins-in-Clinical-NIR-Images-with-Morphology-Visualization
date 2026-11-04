@@ -68,13 +68,6 @@ python vein_pipeline.py --images data/images --masks data/masks --out metrics.cs
 
 This prints per-image scores, writes `metrics.csv`, and reports the mean, standard deviation, and 95% confidence interval for each metric.
 
-### Per-stage timing
-
-```bash
-python fps_benchmark.py --images data/images --masks data/masks --repeats 3
-```
-
-This reports FPS for segmentation only, morphology only, and the combined pipeline. Image loading and file saving are excluded.
 
 ## Metrics
 
@@ -88,11 +81,3 @@ This reports FPS for segmentation only, morphology only, and the combined pipeli
 | ASSD | Average symmetric surface distance, in pixels |
 
 HD95 and ASSD are reported as NaN when either mask is empty, and these cases are excluded from the summary.
-
-
-
-
-
-## License
-
-`[Add license, e.g., MIT.]`
